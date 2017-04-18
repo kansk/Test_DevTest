@@ -1,6 +1,4 @@
 #!/bin/bash
-git config --global http.proxy ""
-git config --global https.proxy ""
 export http_proxy=http://165.225.104.34:80
 export https_proxy=https://165.225.104.34:80
 sudo apt-get update
