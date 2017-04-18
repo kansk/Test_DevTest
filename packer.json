@@ -37,29 +37,11 @@
   ],
 "provisioners": [
   {
-      "destination": "/home/ubuntu/tomcat7",
-      "source": "./tomcat7",
-      "type": "file"
-  },
-  {
-      "destination": "/home/ubuntu/tomcat-users.xml",
-      "source": "./tomcat-users.xml",
-      "type": "file"
-  },
-  {
     "type": "shell",
     "inline": [
     "export http_proxy=http://165.225.104.34:80",
     "export https_proxy=https://165.225.104.34:80",
-    "apt-get update && apt-get upgrade",
-     "apt-get install aptitude",
-    "apt-get -f install",
-    "apt-get -y install git",
-    "git clone https://github.com/steinsag/gwt-maven-example",
-    "cd gwt-maven-example",
-    "sudo apt-get -y install maven",
-    "sudo mvn clean install",
-    "mvn tomcat7:run-war-only" 
-  ]
+    "sudo apt-get update && sudo apt-get upgrade"
+    ]
   }]
 }
