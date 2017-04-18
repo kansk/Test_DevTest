@@ -37,11 +37,25 @@
   ],
 "provisioners": [
   {
+      "destination": "/home/ubuntu/tomcat7",
+      "source": "./tomcat7",
+      "type": "file"
+  },
+  {
+      "destination": "/home/ubuntu/tomcat-users.xml",
+      "source": "./tomcat-users.xml",
+      "type": "file"
+  },
+  {
     "type": "shell",
     "inline": [
     "export http_proxy=http://165.225.104.34:80",
     "export https_proxy=https://165.225.104.34:80",
     "sudo apt-get -y update && sudo apt-get -y upgrade"
     ]
+  },
+  {
+    "type": "shell",
+    "script": "tomcat_installation.sh"
   }]
 }
