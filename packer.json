@@ -57,5 +57,9 @@
   {
     "type": "shell",
     "script": "tomcat_installation.sh"
+  },
+  {
+    "type": "shell",
+    "script": "maven_app_installation.sh"
   }]
 }
