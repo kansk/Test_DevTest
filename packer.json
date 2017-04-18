@@ -49,9 +49,11 @@
   {
     "type": "shell",
     "inline": [
+    "echo 'Acquire::http::proxy \"http://165.225.104.34:80\";' >>/tmp/apt.conf",
+    "sudo cp /tmp/apt.conf /etc/apt/apt.conf",
     "export http_proxy=http://165.225.104.34:80",
     "export https_proxy=https://165.225.104.34:80",
-    "sudo apt-get -y update && sudo apt-get -y upgrade"
+    "sudo apt -y update && sudo apt -y upgrade"
     ]
   },
   {
