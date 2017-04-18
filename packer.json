@@ -59,9 +59,5 @@
   {
     "type": "shell",
     "script": "tomcat_installation.sh"
-  },
-  {
-    "type": "shell",
-    "script": ""
   }]
 }
